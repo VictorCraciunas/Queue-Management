@@ -4,45 +4,42 @@ import com.jfxbase.oopjfxbase.controllers.HelloController;
 import javafx.application.Platform;
 
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Server implements Runnable{
+public class Server implements Runnable {
     private BlockingQueue<Client> clients;
-    private AtomicInteger waitingtime=new AtomicInteger(0);
+    private AtomicInteger waitingtime = new AtomicInteger(0);
 
     public Integer queueNumber;
 
     private HelloController controller;
 
-    private Object lock=new Object();
+    private CyclicBarrier barrier;
 
-
-    public Server(HelloController controller, Integer MaxClients, Integer queueNumber) {
-        this.controller=controller;
-        clients=new LinkedBlockingQueue<>(MaxClients);
-        this.queueNumber=queueNumber;
+    public Server(HelloController controller, Integer MaxClients, Integer queueNumber, CyclicBarrier barrier) {
+        this.controller = controller;
+        clients = new LinkedBlockingQueue<>(MaxClients);
+        this.queueNumber = queueNumber;
+        this.barrier = barrier;
     }
 
     public void addClient(Client client) {
-        synchronized (lock){
-            try{
-                this.clients.put(client);
-                waitingtime.set(waitingtime.get() + client.getService());
-                lock.notifyAll();
-            }
-            catch (InterruptedException e){
-                System.out.println("Queue: full");
-            }
+        try {
+            this.clients.put(client);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
+        waitingtime.set(waitingtime.get() + client.getService());
 
     }
 
-    public void removeClient(){
-        try{
+    public void removeClient() {
+        try {
             this.clients.take();
-        }
-        catch (InterruptedException e){
+        } catch (InterruptedException e) {
             System.out.println("Queue already empty");
         }
     }
@@ -54,43 +51,39 @@ public class Server implements Runnable{
     @Override
     public void run() {
 
-        while (true){
-            synchronized (lock){
-                while (clients.isEmpty()){
-                    try {
-                        lock.wait();
-                    }
-                    catch (InterruptedException e){
-                        System.out.println("WAITING ISN'T WORKIGN");
-                        return;
-                    }
+        while (true) {
+            if (!clients.isEmpty()) {
+                if (clients.peek().getService() != 0) {
+                    updateUI();
+                }
+
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+
+                waitingtime.set(waitingtime.get() - 1);
+                if (clients.peek() != null) {
+                    clients.peek().setService(clients.peek().getService() - 1); //decrement the service time of the first client
+                }
+
+
+                if (clients.peek().getService() == 0) {
+                    removeClient();
+                    updateUI();
                 }
             }
 
-        if (!clients.isEmpty()){
-
             try {
-                Thread.sleep(1000);
+                barrier.await();
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                Thread.currentThread().interrupt();
+                break;
+            } catch (BrokenBarrierException e) {
+                e.printStackTrace();
+                break;
             }
-
-
-            if(clients.peek().getService() != 0){
-                updateUI();
-            }
-
-            waitingtime.set(waitingtime.get()-1);
-            if(clients.peek() != null) {
-                    clients.peek().setService(clients.peek().getService()-1); //decrement the service time of the first client
-            }
-
-
-            if(clients.peek().getService() == 0){
-                removeClient();
-                updateUI();
-            }
-        }
 
         }
     }
@@ -99,12 +92,15 @@ public class Server implements Runnable{
         return waitingtime;
     }
 
-    public void printClients(){
-        System.out.println("Queue: " + queueNumber);
-        for (Client client : clients) {
-            System.out.println(client);
+    public void printClients() {
+        if (!clients.isEmpty()) {
+            System.out.println("Queue: " + queueNumber);
+            for (Client client : clients) {
+                System.out.println(client);
+            }
+        } else {
+            System.out.println("Queue " + queueNumber + " closed");
         }
-        System.out.println("waiting time: " + waitingtime);
     }
 
     public BlockingQueue<Client> getClients() {
@@ -116,7 +112,4 @@ public class Server implements Runnable{
         Platform.runLater(() -> controller.updateServerDisplay());
     }
 
-    private void Test(){
-
-    }
 }

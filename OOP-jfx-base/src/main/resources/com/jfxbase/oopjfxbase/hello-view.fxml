@@ -2,11 +2,12 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml" fx:controller="com.jfxbase.oopjfxbase.controllers.HelloController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jfxbase.oopjfxbase.controllers.HelloController">
    <children>
-      <Button onAction="#initializeSimulation" layoutX="482.0" layoutY="343.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="482.0" layoutY="343.0" mnemonicParsing="false" onAction="#initializeSimulation" text="Button" />
       <VBox fx:id="vBox" layoutX="95.0" layoutY="58.0" prefHeight="243.0" prefWidth="430.0" />
+      <Text layoutX="246.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simulation Time: " wrappingWidth="106.13671875" />
    </children>
 </Pane>
