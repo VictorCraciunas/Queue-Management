@@ -8,6 +8,6 @@
    <children>
       <Button layoutX="482.0" layoutY="343.0" mnemonicParsing="false" onAction="#initializeSimulation" text="Button" />
       <VBox fx:id="vBox" layoutX="95.0" layoutY="58.0" prefHeight="243.0" prefWidth="430.0" />
-      <Text layoutX="246.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simulation Time: " wrappingWidth="106.13671875" />
+      <Text fx:id="SimulationTime" layoutX="246.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simulation Time: " wrappingWidth="106.13671875" />
    </children>
 </Pane>

@@ -1,4 +1,4 @@
-package com.jfxbase.oopjfxbase.AppLogic;
+package com.jfxbase.oopjfxbase.AppLogic.Model;
 
 public class Client {
 

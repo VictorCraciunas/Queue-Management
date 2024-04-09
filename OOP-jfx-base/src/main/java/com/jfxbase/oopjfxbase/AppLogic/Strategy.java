@@ -1,6 +1,8 @@
 package com.jfxbase.oopjfxbase.AppLogic;
 
 
+import com.jfxbase.oopjfxbase.AppLogic.Model.Server;
+
 import java.util.List;
 
 public class Strategy {

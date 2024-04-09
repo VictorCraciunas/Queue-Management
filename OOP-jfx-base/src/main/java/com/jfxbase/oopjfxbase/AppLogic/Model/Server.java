@@ -1,7 +1,4 @@
-package com.jfxbase.oopjfxbase.AppLogic;
-
-import com.jfxbase.oopjfxbase.controllers.HelloController;
-import javafx.application.Platform;
+package com.jfxbase.oopjfxbase.AppLogic.Model;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.BrokenBarrierException;
@@ -15,12 +12,9 @@ public class Server implements Runnable {
 
     public Integer queueNumber;
 
-    private HelloController controller;
-
     private CyclicBarrier barrier;
 
-    public Server(HelloController controller, Integer MaxClients, Integer queueNumber, CyclicBarrier barrier) {
-        this.controller = controller;
+    public Server(Integer MaxClients, Integer queueNumber, CyclicBarrier barrier) {
         clients = new LinkedBlockingQueue<>(MaxClients);
         this.queueNumber = queueNumber;
         this.barrier = barrier;
@@ -53,12 +47,8 @@ public class Server implements Runnable {
 
         while (true) {
             if (!clients.isEmpty()) {
-                if (clients.peek().getService() != 0) {
-                    updateUI();
-                }
-
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(5000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -71,10 +61,11 @@ public class Server implements Runnable {
 
                 if (clients.peek().getService() == 0) {
                     removeClient();
-                    updateUI();
                 }
             }
 
+
+            //checkPoint for the thread
             try {
                 barrier.await();
             } catch (InterruptedException e) {
@@ -107,9 +98,5 @@ public class Server implements Runnable {
         return clients;
     }
 
-    private void updateUI() {
-        // Use Platform.runLater to update the UI on the JavaFX Application Thread
-        Platform.runLater(() -> controller.updateServerDisplay());
-    }
 
 }

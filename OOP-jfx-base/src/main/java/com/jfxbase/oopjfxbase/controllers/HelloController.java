@@ -1,7 +1,7 @@
 package com.jfxbase.oopjfxbase.controllers;
 
-import com.jfxbase.oopjfxbase.AppLogic.Client;
-import com.jfxbase.oopjfxbase.AppLogic.Server;
+import com.jfxbase.oopjfxbase.AppLogic.Model.Client;
+import com.jfxbase.oopjfxbase.AppLogic.Model.Server;
 import com.jfxbase.oopjfxbase.AppLogic.SimulationManager;
 import com.jfxbase.oopjfxbase.utils.SceneController;
 import javafx.fxml.FXML;
@@ -9,11 +9,16 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
+import java.util.List;
+
 
 public class HelloController extends SceneController {
 
     @FXML
     public VBox vBox;
+
+    @FXML
+    public Text SimulationTime;
 
     SimulationManager simulationManager;
 
@@ -35,16 +40,13 @@ public class HelloController extends SceneController {
 
         new Thread((simulationManager)).start();
 
-        // Update the UI to show the initial state
-        updateServerDisplay();
-
     }
 
     // Method to update the UI
-    public void updateServerDisplay() {
+    public void updateServerDisplay(Integer currTime, List<Server> servers) {
         vBox.getChildren().clear(); // Clear the existing content
 
-        for (Server server : simulationManager.scheduler.getServers()) {
+        for (Server server : servers) {
             HBox serverBox = new HBox();
             serverBox.setSpacing(10); // Adjust spacing as needed
 
@@ -65,6 +67,8 @@ public class HelloController extends SceneController {
             }
             vBox.getChildren().add(serverBox);
         }
+
+        SimulationTime.setText("Simulation Time: " + currTime);
     }
 
 }

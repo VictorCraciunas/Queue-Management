@@ -1,6 +1,9 @@
 package com.jfxbase.oopjfxbase.AppLogic;
 
+import com.jfxbase.oopjfxbase.AppLogic.Model.Client;
+import com.jfxbase.oopjfxbase.AppLogic.Model.Server;
 import com.jfxbase.oopjfxbase.controllers.HelloController;
+import javafx.application.Platform;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,17 +16,22 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class SimulationManager implements Runnable {
 
     public LinkedBlockingQueue<Client> clients;
-    public AtomicInteger currentTime = new AtomicInteger(1);
+
+    public AtomicInteger currentTime = new AtomicInteger(0);
 
     public Integer totalTime = 0;
 
     public Scheduler scheduler;
+
+    private HelloController controller;
+
 
     private CyclicBarrier barrier;
 
 
     public SimulationManager(Integer nrClients, Integer arrivalMin, Integer arrivalMax, Integer serviceMin, Integer serviceMax, Integer nrQueues, HelloController helloController) {
 
+        this.controller = helloController;
         this.clients = new LinkedBlockingQueue<>();
         this.scheduler = new Scheduler();
 
@@ -36,12 +44,13 @@ public class SimulationManager implements Runnable {
             @Override
             public void run() {
                 printLog();
+                currentTime.incrementAndGet();
             }
         });
 
         //create the server
         for (int i = 0; i < nrQueues; i++) {
-            Server server = new Server(helloController, clients.size(), i + 1, barrier);
+            Server server = new Server(clients.size(), i + 1, barrier);
             scheduler.getServers().add(server);
             new Thread(server).start();
         }
@@ -83,14 +92,10 @@ public class SimulationManager implements Runnable {
                 clients.removeAll(toRemove);
             }
 
+            updateUI();
             totalTime = totalTime - 1;
 
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-
+            //checkpoint for all the threads
             try {
                 barrier.await();
             } catch (InterruptedException e) {
@@ -100,6 +105,15 @@ public class SimulationManager implements Runnable {
                 e.printStackTrace();
                 return;
             }
+
+
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+
         }
     }
 
@@ -108,7 +122,12 @@ public class SimulationManager implements Runnable {
         for (Server server : scheduler.getServers()) {
             server.printClients();
         }
-        currentTime.incrementAndGet();
+    }
+
+    private void updateUI() {
+
+        // we update the UI Thread
+        Platform.runLater(() -> controller.updateServerDisplay(currentTime.get(), scheduler.getServers()));
     }
 
 }
