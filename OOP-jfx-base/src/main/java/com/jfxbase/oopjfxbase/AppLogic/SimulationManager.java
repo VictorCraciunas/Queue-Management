@@ -28,12 +28,15 @@ public class SimulationManager implements Runnable {
 
     private CyclicBarrier barrier;
 
+    StrategyPicked strategyPicked;
 
-    public SimulationManager(Integer nrClients, Integer arrivalMin, Integer arrivalMax, Integer serviceMin, Integer serviceMax, Integer nrQueues, HelloController helloController) {
+
+    public SimulationManager(Integer nrClients, Integer arrivalMin, Integer arrivalMax, Integer serviceMin, Integer serviceMax, Integer nrQueues, HelloController helloController, StrategyPicked strategyPicked) {
 
         this.controller = helloController;
         this.clients = new LinkedBlockingQueue<>();
         this.scheduler = new Scheduler();
+        this.strategyPicked=strategyPicked;
 
         //create clients
         generateRandomClients(nrClients, arrivalMin, arrivalMax, serviceMin, serviceMax);
@@ -85,7 +88,7 @@ public class SimulationManager implements Runnable {
                 List<Client> toRemove = new ArrayList<>();
                 for (Client client : clients) {
                     if (client.getArrival() == currentTime.get()) {
-                        Strategy.getMinServer(scheduler.getServers()).addClient(client);
+                        scheduler.addClient(strategyPicked,client);
                         toRemove.add(client);
                     }
                 }
@@ -112,7 +115,6 @@ public class SimulationManager implements Runnable {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-
 
         }
     }
