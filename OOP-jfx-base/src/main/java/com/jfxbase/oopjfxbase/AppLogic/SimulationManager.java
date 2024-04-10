@@ -5,6 +5,9 @@ import com.jfxbase.oopjfxbase.AppLogic.Model.Server;
 import com.jfxbase.oopjfxbase.controllers.HelloController;
 import javafx.application.Platform;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -30,13 +33,22 @@ public class SimulationManager implements Runnable {
 
     StrategyPicked strategyPicked;
 
+    private BufferedWriter writer;
+
 
     public SimulationManager(Integer nrClients, Integer arrivalMin, Integer arrivalMax, Integer serviceMin, Integer serviceMax, Integer nrQueues, HelloController helloController, StrategyPicked strategyPicked) {
 
         this.controller = helloController;
         this.clients = new LinkedBlockingQueue<>();
         this.scheduler = new Scheduler();
-        this.strategyPicked=strategyPicked;
+        this.strategyPicked = strategyPicked;
+
+        //create the file
+        try {
+            this.writer = new BufferedWriter(new FileWriter("simulation_output.txt"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         //create clients
         generateRandomClients(nrClients, arrivalMin, arrivalMax, serviceMin, serviceMax);
@@ -76,9 +88,22 @@ public class SimulationManager implements Runnable {
     }
 
     public void printClients() {
+        //print in console
         for (Client client : clients) {
             System.out.println(client);
         }
+
+        //print in file
+        try {
+            for (Client client : clients) {
+                writer.write(client.toString());
+                writer.newLine();  // Move to the next line
+            }
+            writer.flush(); // Make sure to flush the writer to ensure all data is written to the file
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
@@ -88,12 +113,13 @@ public class SimulationManager implements Runnable {
                 List<Client> toRemove = new ArrayList<>();
                 for (Client client : clients) {
                     if (client.getArrival() == currentTime.get()) {
-                        scheduler.addClient(strategyPicked,client);
+                        scheduler.addClient(strategyPicked, client);
                         toRemove.add(client);
                     }
                 }
                 clients.removeAll(toRemove);
             }
+
 
             updateUI();
             totalTime = totalTime - 1;
@@ -120,9 +146,24 @@ public class SimulationManager implements Runnable {
     }
 
     private void printLog() {
+
+        //print in console
         System.out.println("\nTIME SIMULATION ------------- " + currentTime.get());
         for (Server server : scheduler.getServers()) {
             server.printClients();
+        }
+
+
+        //print in file
+        try {
+            writer.write("\nTIME SIMULATION ------------- " + currentTime.get());
+            writer.newLine();
+            for (Server server : scheduler.getServers()) {
+                server.printClientsFile(writer);
+            }
+            writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

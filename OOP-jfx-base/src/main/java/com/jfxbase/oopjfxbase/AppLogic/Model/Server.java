@@ -1,5 +1,7 @@
 package com.jfxbase.oopjfxbase.AppLogic.Model;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
@@ -13,6 +15,8 @@ public class Server implements Runnable {
     public Integer queueNumber;
 
     private CyclicBarrier barrier;
+
+
 
     public Server(Integer MaxClients, Integer queueNumber, CyclicBarrier barrier) {
         clients = new LinkedBlockingQueue<>(MaxClients);
@@ -97,6 +101,27 @@ public class Server implements Runnable {
     public BlockingQueue<Client> getClients() {
         return clients;
     }
+
+
+    public void printClientsFile(BufferedWriter writer) {
+        try {
+            if (!clients.isEmpty()) {
+                writer.write("Queue: " + queueNumber);
+                writer.newLine();  // Move to the next line
+                for (Client client : clients) {
+                    writer.write(client.toString());
+                    writer.newLine();  // Move to the next line after writing each client
+                }
+            } else {
+                writer.write("Queue " + queueNumber + " closed");
+                writer.newLine();
+            }
+            writer.flush(); // Ensure the data is written to the file
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 }

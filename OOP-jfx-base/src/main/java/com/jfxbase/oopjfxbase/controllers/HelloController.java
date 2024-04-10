@@ -7,6 +7,7 @@ import com.jfxbase.oopjfxbase.AppLogic.StrategyPicked;
 import com.jfxbase.oopjfxbase.utils.SceneController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -22,6 +23,20 @@ public class HelloController extends SceneController {
     @FXML
     public Text SimulationTime;
 
+    @FXML
+    public TextField nrClients;
+    @FXML
+    public TextField nrQueues;
+    @FXML
+    public TextField minArriveTime;
+    @FXML
+    public TextField maxArriveTime;
+    @FXML
+    public TextField minServiceTime;
+    @FXML
+    public TextField maxServiceTime;
+
+
     SimulationManager simulationManager;
 
     Integer shortestTimePressed=0;
@@ -30,15 +45,14 @@ public class HelloController extends SceneController {
 
     @FXML
     private void initializeSimulation() {
-        // Number of servers you want to create
-        Integer nrQueues = 2;  // Set this to the number of servers you need
 
 
         if(shortestQueuePressed == 1 && shortestTimePressed == 0){
-            this.simulationManager = new SimulationManager(4, 1, 5, 1, 5, nrQueues, this, StrategyPicked.SHORTEST_QUEUE);
+            this.simulationManager = new SimulationManager(Integer.parseInt(nrClients.getText()), Integer.parseInt(minArriveTime.getText()), Integer.parseInt(maxArriveTime.getText()), Integer.parseInt(minServiceTime.getText()), Integer.parseInt(maxServiceTime.getText()), Integer.parseInt(nrQueues.getText()), this, StrategyPicked.SHORTEST_QUEUE);
         }
         else if (shortestTimePressed == 1 && shortestQueuePressed == 0){
-            this.simulationManager = new SimulationManager(4, 1, 5, 1, 5, nrQueues, this, StrategyPicked.SHORTEST_TIME);
+            this.simulationManager = new SimulationManager(Integer.parseInt(nrClients.getText()), Integer.parseInt(minArriveTime.getText()), Integer.parseInt(maxArriveTime.getText()), Integer.parseInt(minServiceTime.getText()), Integer.parseInt(maxServiceTime.getText()), Integer.parseInt(nrQueues.getText()), this, StrategyPicked.SHORTEST_TIME);
+
         }
         else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
