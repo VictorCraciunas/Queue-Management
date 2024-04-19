@@ -16,14 +16,6 @@ public class Server implements Runnable {
 
     private CyclicBarrier barrier;
 
-    public Integer maxClientsInServer=0;
-
-
-    public Integer getMaxClientsInServer() {
-        return maxClientsInServer;
-    }
-
-
     public Server(Integer MaxClients, Integer queueNumber, CyclicBarrier barrier) {
         clients = new LinkedBlockingQueue<>(MaxClients);
         this.queueNumber = queueNumber;
@@ -34,9 +26,6 @@ public class Server implements Runnable {
         try {
             this.clients.put(client);
             client.setWaitingTime(this.waitingtime.get() + client.getService()); // we set the waiting time for the client
-            if(clients.size() > maxClientsInServer){
-                maxClientsInServer=clients.size();
-            }
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -135,7 +124,6 @@ public class Server implements Runnable {
             e.printStackTrace();
         }
     }
-
 
 
 }

@@ -20,13 +20,13 @@ public class Strategy {
         return minServer;
     }
 
-    public static Server getShortestServer(List<Server> servers){
-        Integer shortestSize=1000000;
-        Server shortestServer=null;
+    public static Server getShortestServer(List<Server> servers) {
+        Integer shortestSize = 1000000;
+        Server shortestServer = null;
         for (Server server : servers) {
-            if(server.getClients().size() < shortestSize){
-                shortestServer=server;
-                shortestSize=server.getClients().size();
+            if (server.getClients().size() < shortestSize) {
+                shortestServer = server;
+                shortestSize = server.getClients().size();
             }
         }
 

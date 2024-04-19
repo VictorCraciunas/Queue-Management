@@ -4,11 +4,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Client {
 
-    private static Integer countID=1;
+    private static Integer countID = 1;
     public Integer ID;
     public Integer arrival;
     public Integer service;
-    public AtomicInteger waitingTime=new AtomicInteger(0); //waiting time + service
+    public AtomicInteger waitingTime = new AtomicInteger(0); //waiting time + service
 
     public AtomicInteger getWaitingTime() {
         return waitingTime;
@@ -19,7 +19,7 @@ public class Client {
     }
 
     public Client(Integer arrival, Integer service) {
-        this.ID=countID++;
+        this.ID = countID++;
         this.arrival = arrival;
         this.service = service;
     }
@@ -38,7 +38,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
+        return " Client{" +
                 "ID=" + ID +
                 ", arrival=" + arrival +
                 ", service=" + service +

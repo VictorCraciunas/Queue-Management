@@ -15,7 +15,7 @@ import javafx.scene.text.Text;
 import java.util.List;
 
 
-public class HelloController extends SceneController {
+public class GUI extends SceneController {
 
     @FXML
     public VBox vBox;
@@ -42,22 +42,20 @@ public class HelloController extends SceneController {
 
     SimulationManager simulationManager;
 
-    Integer shortestTimePressed=0;
-    Integer shortestQueuePressed=0;
+    Integer shortestTimePressed = 0;
+    Integer shortestQueuePressed = 0;
 
 
     @FXML
     private void initializeSimulation() {
 
 
-        if(shortestQueuePressed == 1 && shortestTimePressed == 0){
+        if (shortestQueuePressed == 1 && shortestTimePressed == 0) {
             this.simulationManager = new SimulationManager(Integer.parseInt(nrClients.getText()), Integer.parseInt(minArriveTime.getText()), Integer.parseInt(maxArriveTime.getText()), Integer.parseInt(minServiceTime.getText()), Integer.parseInt(maxServiceTime.getText()), Integer.parseInt(nrQueues.getText()), this, StrategyPicked.SHORTEST_QUEUE, Integer.parseInt(maxSimulationTime.getText()));
-        }
-        else if (shortestTimePressed == 1 && shortestQueuePressed == 0){
+        } else if (shortestTimePressed == 1 && shortestQueuePressed == 0) {
             this.simulationManager = new SimulationManager(Integer.parseInt(nrClients.getText()), Integer.parseInt(minArriveTime.getText()), Integer.parseInt(maxArriveTime.getText()), Integer.parseInt(minServiceTime.getText()), Integer.parseInt(maxServiceTime.getText()), Integer.parseInt(nrQueues.getText()), this, StrategyPicked.SHORTEST_TIME, Integer.parseInt(maxSimulationTime.getText()));
 
-        }
-        else {
+        } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Strategy Selection Required");
             alert.setHeaderText(null);
@@ -74,6 +72,20 @@ public class HelloController extends SceneController {
     // Method to update the UI
     public void updateServerDisplay(Integer currTime, List<Server> servers) {
         vBox.getChildren().clear(); // Clear the existing content
+
+        HBox clients = new HBox();
+        clients.setSpacing(10);
+        if (!simulationManager.getClients().isEmpty()) {
+            for (Client client : simulationManager.getClients()) {
+                Text clientNotDistributed = new Text(client.toString());
+                clients.getChildren().add(clientNotDistributed);
+            }
+        } else {
+            Text emptyClients = new Text("Clients: empty");
+            clients.getChildren().add(emptyClients);
+        }
+        vBox.getChildren().add(clients);
+
 
         for (Server server : servers) {
             HBox serverBox = new HBox();
@@ -96,20 +108,19 @@ public class HelloController extends SceneController {
             }
             vBox.getChildren().add(serverBox);
         }
-
         SimulationTime.setText("Simulation Time: " + currTime);
     }
 
     @FXML
-    public void shortestTimeButtonPressed(){
-        shortestTimePressed=1;
-        shortestQueuePressed=0;
+    public void shortestTimeButtonPressed() {
+        shortestTimePressed = 1;
+        shortestQueuePressed = 0;
     }
 
     @FXML
-    public void shortestQueueButtonPressed(){
-        shortestTimePressed=0;
-        shortestQueuePressed=1;
+    public void shortestQueueButtonPressed() {
+        shortestTimePressed = 0;
+        shortestQueuePressed = 1;
     }
 
 }

@@ -2,7 +2,7 @@ package com.jfxbase.oopjfxbase.AppLogic;
 
 import com.jfxbase.oopjfxbase.AppLogic.Model.Client;
 import com.jfxbase.oopjfxbase.AppLogic.Model.Server;
-import com.jfxbase.oopjfxbase.controllers.HelloController;
+import com.jfxbase.oopjfxbase.controllers.GUI;
 import javafx.application.Platform;
 
 import java.io.BufferedWriter;
@@ -22,13 +22,11 @@ public class SimulationManager implements Runnable {
 
     public AtomicInteger currentTime = new AtomicInteger(0);
 
-    public AtomicInteger simulationTime=new AtomicInteger();
+    public AtomicInteger MaxSimulationTime = new AtomicInteger();
 
     public Scheduler scheduler;
 
-    private HelloController controller;
-
-
+    private GUI controller;
     private CyclicBarrier barrier;
 
     StrategyPicked strategyPicked;
@@ -40,17 +38,17 @@ public class SimulationManager implements Runnable {
     private Integer sumWaitingTime = 0;
 
     private Integer nrClients;
-    private AtomicInteger peakHour =new AtomicInteger(0);
-    private AtomicInteger maxClientsInQueues =new AtomicInteger(0);
+    private AtomicInteger peakHour = new AtomicInteger(0);
+    private AtomicInteger maxClientsInQueues = new AtomicInteger(0);
 
 
-    public SimulationManager(Integer nrClients, Integer arrivalMin, Integer arrivalMax, Integer serviceMin, Integer serviceMax, Integer nrQueues, HelloController helloController, StrategyPicked strategyPicked, Integer simulationTime) {
+    public SimulationManager(Integer nrClients, Integer arrivalMin, Integer arrivalMax, Integer serviceMin, Integer serviceMax, Integer nrQueues, GUI helloController, StrategyPicked strategyPicked, Integer MaxSimulationTime) {
 
         this.controller = helloController;
         this.clients = new LinkedBlockingQueue<>();
         this.scheduler = new Scheduler();
         this.strategyPicked = strategyPicked;
-        this.simulationTime.set(simulationTime);
+        this.MaxSimulationTime.set(MaxSimulationTime);
         this.nrClients = nrClients;
 
         //create the file
@@ -119,7 +117,7 @@ public class SimulationManager implements Runnable {
 
     @Override
     public void run() {
-        while (simulationTime.get() != -1) {
+        while (MaxSimulationTime.intValue() + 1 != currentTime.intValue()) {
             if (!clients.isEmpty()) {
                 List<Client> toRemove = new ArrayList<>();
                 for (Client client : clients) {
@@ -135,7 +133,6 @@ public class SimulationManager implements Runnable {
 
             updateUI();
             checkPeakHour();
-            simulationTime.decrementAndGet();
 
             //checkpoint for all the threads
             try {
@@ -148,6 +145,10 @@ public class SimulationManager implements Runnable {
                 return;
             }
 
+            if (clients.isEmpty() && scheduler.getCurrentClientsInQueues() == 0) {
+                break;
+            }
+
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -158,13 +159,16 @@ public class SimulationManager implements Runnable {
         System.out.println("Average service Time: " + averageServiceTime); //average service time
         System.out.println("Average waiting Time: " + 1.0 * sumWaitingTime / nrClients); //average waiting time
         System.out.println("Peak hour: " + peakHour + " with " + maxClientsInQueues + " clients "); //peak hour
-        //write in file
 
+        //write in file
         try {
             writer.write("Average service Time: " + averageServiceTime);
             writer.newLine();
             writer.flush();
             writer.write("Average waiting Time: " + 1.0 * sumWaitingTime / nrClients);
+            writer.newLine();
+            writer.flush();
+            writer.write("Peak hour: " + peakHour + " with " + maxClientsInQueues + " clients ");
             writer.newLine();
             writer.flush();
         } catch (IOException e) {
@@ -173,9 +177,19 @@ public class SimulationManager implements Runnable {
     }
 
     private void printLog() {
+        StringBuilder output = new StringBuilder();
+        output.append("Clients: ");
+        if (clients.isEmpty()) {
+            output.append("empty");
+        } else {
+            for (Client client : clients) { // we print the clients that have been distributed yet
+                output.append(client);
+            }
+        }
 
         //print in console
         System.out.println("\nTIME SIMULATION ------------- " + currentTime.get());
+        System.out.println(output);
         for (Server server : scheduler.getServers()) {
             server.printClients();
         }
@@ -184,6 +198,8 @@ public class SimulationManager implements Runnable {
         //print in file
         try {
             writer.write("\nTIME SIMULATION ------------- " + currentTime.get());
+            writer.newLine();
+            writer.write(output.toString());
             writer.newLine();
             for (Server server : scheduler.getServers()) {
                 server.printClientsFile(writer);
@@ -195,14 +211,15 @@ public class SimulationManager implements Runnable {
     }
 
     private void checkPeakHour() {
-        int currentMax=0;
-        for(Server server : scheduler.getServers()){
-            currentMax=currentMax + server.getMaxClientsInServer();
+        if (scheduler.getCurrentClientsInQueues() > maxClientsInQueues.intValue()) {
+            maxClientsInQueues.set(scheduler.getCurrentClientsInQueues());
+            peakHour.set(currentTime.intValue());
         }
-        if(currentMax > maxClientsInQueues.get()){
-            maxClientsInQueues.set(currentMax);
-            peakHour.set(simulationTime.get());
-        }
+
+    }
+
+    public LinkedBlockingQueue<Client> getClients() {
+        return clients;
     }
 
     private void updateUI() {
