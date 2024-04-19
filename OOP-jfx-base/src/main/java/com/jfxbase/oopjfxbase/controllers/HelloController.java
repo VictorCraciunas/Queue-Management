@@ -36,6 +36,9 @@ public class HelloController extends SceneController {
     @FXML
     public TextField maxServiceTime;
 
+    @FXML
+    public TextField maxSimulationTime;
+
 
     SimulationManager simulationManager;
 
@@ -48,10 +51,10 @@ public class HelloController extends SceneController {
 
 
         if(shortestQueuePressed == 1 && shortestTimePressed == 0){
-            this.simulationManager = new SimulationManager(Integer.parseInt(nrClients.getText()), Integer.parseInt(minArriveTime.getText()), Integer.parseInt(maxArriveTime.getText()), Integer.parseInt(minServiceTime.getText()), Integer.parseInt(maxServiceTime.getText()), Integer.parseInt(nrQueues.getText()), this, StrategyPicked.SHORTEST_QUEUE);
+            this.simulationManager = new SimulationManager(Integer.parseInt(nrClients.getText()), Integer.parseInt(minArriveTime.getText()), Integer.parseInt(maxArriveTime.getText()), Integer.parseInt(minServiceTime.getText()), Integer.parseInt(maxServiceTime.getText()), Integer.parseInt(nrQueues.getText()), this, StrategyPicked.SHORTEST_QUEUE, Integer.parseInt(maxSimulationTime.getText()));
         }
         else if (shortestTimePressed == 1 && shortestQueuePressed == 0){
-            this.simulationManager = new SimulationManager(Integer.parseInt(nrClients.getText()), Integer.parseInt(minArriveTime.getText()), Integer.parseInt(maxArriveTime.getText()), Integer.parseInt(minServiceTime.getText()), Integer.parseInt(maxServiceTime.getText()), Integer.parseInt(nrQueues.getText()), this, StrategyPicked.SHORTEST_TIME);
+            this.simulationManager = new SimulationManager(Integer.parseInt(nrClients.getText()), Integer.parseInt(minArriveTime.getText()), Integer.parseInt(maxArriveTime.getText()), Integer.parseInt(minServiceTime.getText()), Integer.parseInt(maxServiceTime.getText()), Integer.parseInt(nrQueues.getText()), this, StrategyPicked.SHORTEST_TIME, Integer.parseInt(maxSimulationTime.getText()));
 
         }
         else {

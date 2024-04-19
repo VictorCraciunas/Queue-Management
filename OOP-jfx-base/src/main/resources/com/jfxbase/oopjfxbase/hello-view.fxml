@@ -17,5 +17,6 @@
       <TextField fx:id="maxArriveTime" layoutX="316.0" layoutY="526.0" promptText="Maximum Arrival Time" />
       <TextField fx:id="minServiceTime" layoutX="133.0" layoutY="564.0" promptText="Minimum service Time" />
       <TextField fx:id="maxServiceTime" layoutX="316.0" layoutY="564.0" promptText="Maximum Service Time" />
+      <TextField fx:id="maxSimulationTime" layoutX="316.0" layoutY="448.0" promptText="Max Simulation Time" />
    </children>
 </Pane>

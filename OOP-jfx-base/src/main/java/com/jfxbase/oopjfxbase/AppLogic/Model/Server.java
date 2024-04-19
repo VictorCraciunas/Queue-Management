@@ -16,6 +16,12 @@ public class Server implements Runnable {
 
     private CyclicBarrier barrier;
 
+    public Integer maxClientsInServer=0;
+
+
+    public Integer getMaxClientsInServer() {
+        return maxClientsInServer;
+    }
 
 
     public Server(Integer MaxClients, Integer queueNumber, CyclicBarrier barrier) {
@@ -27,6 +33,10 @@ public class Server implements Runnable {
     public void addClient(Client client) {
         try {
             this.clients.put(client);
+            client.setWaitingTime(this.waitingtime.get() + client.getService()); // we set the waiting time for the client
+            if(clients.size() > maxClientsInServer){
+                maxClientsInServer=clients.size();
+            }
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -52,7 +62,7 @@ public class Server implements Runnable {
         while (true) {
             if (!clients.isEmpty()) {
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -88,15 +98,18 @@ public class Server implements Runnable {
     }
 
     public void printClients() {
+        StringBuilder output = new StringBuilder();
         if (!clients.isEmpty()) {
-            System.out.println("Queue: " + queueNumber);
+            output.append("Queue: ").append(queueNumber).append(": ");
             for (Client client : clients) {
-                System.out.println(client);
+                output.append(" | ").append(client);
             }
+            System.out.println(output);
         } else {
             System.out.println("Queue " + queueNumber + " closed");
         }
     }
+
 
     public BlockingQueue<Client> getClients() {
         return clients;
@@ -105,13 +118,14 @@ public class Server implements Runnable {
 
     public void printClientsFile(BufferedWriter writer) {
         try {
+            StringBuilder output = new StringBuilder();
             if (!clients.isEmpty()) {
-                writer.write("Queue: " + queueNumber);
-                writer.newLine();  // Move to the next line
+                output.append("Queue: ").append(queueNumber);
                 for (Client client : clients) {
-                    writer.write(client.toString());
-                    writer.newLine();  // Move to the next line after writing each client
+                    output.append(" | ").append(client);
                 }
+                writer.write(output.toString());
+                writer.newLine();  // Move to the next line after writing the entire line of clients
             } else {
                 writer.write("Queue " + queueNumber + " closed");
                 writer.newLine();
