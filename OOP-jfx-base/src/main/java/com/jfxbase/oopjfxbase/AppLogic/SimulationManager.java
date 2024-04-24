@@ -4,6 +4,7 @@ import com.jfxbase.oopjfxbase.AppLogic.Model.Client;
 import com.jfxbase.oopjfxbase.AppLogic.Model.Server;
 import com.jfxbase.oopjfxbase.controllers.GUI;
 import javafx.application.Platform;
+import javafx.fxml.FXML;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -40,6 +41,7 @@ public class SimulationManager implements Runnable {
     private Integer nrClients;
     private AtomicInteger peakHour = new AtomicInteger(0);
     private AtomicInteger maxClientsInQueues = new AtomicInteger(0);
+    private volatile boolean isRunning = true; // Control flag
 
 
     public SimulationManager(Integer nrClients, Integer arrivalMin, Integer arrivalMax, Integer serviceMin, Integer serviceMax, Integer nrQueues, GUI helloController, StrategyPicked strategyPicked, Integer MaxSimulationTime) {
@@ -117,7 +119,7 @@ public class SimulationManager implements Runnable {
 
     @Override
     public void run() {
-        while (MaxSimulationTime.intValue() + 1 != currentTime.intValue()) {
+        while ( isRunning && MaxSimulationTime.intValue() + 1 != currentTime.intValue()) {
             if (!clients.isEmpty()) {
                 List<Client> toRemove = new ArrayList<>();
                 for (Client client : clients) {
@@ -174,6 +176,8 @@ public class SimulationManager implements Runnable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        showDetails();
     }
 
     private void printLog() {
@@ -228,4 +232,12 @@ public class SimulationManager implements Runnable {
         Platform.runLater(() -> controller.updateServerDisplay(currentTime.get(), scheduler.getServers()));
     }
 
+    private void showDetails() {
+        Platform.runLater(() -> controller.showAverageDetails(averageServiceTime, 1.0 * sumWaitingTime / nrClients, peakHour.doubleValue(),maxClientsInQueues.intValue()));
+    }
+
+
+    public void setRunning(boolean running) {
+        isRunning = running;
+    }
 }

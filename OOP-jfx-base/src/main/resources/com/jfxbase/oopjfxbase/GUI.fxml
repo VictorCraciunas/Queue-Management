@@ -1,28 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0"
-      prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.jfxbase.oopjfxbase.controllers.GUI">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="600.0" styleClass="backgroundApp" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jfxbase.oopjfxbase.controllers.GUI">
     <children>
-        <Button layoutX="235.0" layoutY="404.0" mnemonicParsing="false" onAction="#initializeSimulation"
-                text="Start Simulation"/>
-        <VBox fx:id="vBox" layoutX="95.0" layoutY="58.0" prefHeight="243.0" prefWidth="430.0"/>
-        <Text fx:id="SimulationTime" layoutX="246.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="Simulation Time: " wrappingWidth="106.13671875"/>
-        <Button layoutX="340.0" layoutY="627.0" mnemonicParsing="false" onAction="#shortestTimeButtonPressed"
-                text="Min Time Strategy"/>
-        <Button layoutX="140.0" layoutY="627.0" mnemonicParsing="false" onAction="#shortestQueueButtonPressed"
-                text="Shortest Queue Strategy"/>
-        <TextField fx:id="nrClients" layoutX="133.0" layoutY="448.0" promptText="Number Clients"/>
-        <TextField fx:id="nrQueues" layoutX="133.0" layoutY="486.0" promptText="Number Queues"/>
-        <TextField fx:id="minArriveTime" layoutX="133.0" layoutY="526.0" promptText="Minimum Arrival Time"/>
-        <TextField fx:id="maxArriveTime" layoutX="316.0" layoutY="526.0" promptText="Maximum Arrival Time"/>
-        <TextField fx:id="minServiceTime" layoutX="133.0" layoutY="564.0" promptText="Minimum service Time"/>
-        <TextField fx:id="maxServiceTime" layoutX="316.0" layoutY="564.0" promptText="Maximum Service Time"/>
-        <TextField fx:id="maxSimulationTime" layoutX="316.0" layoutY="448.0" promptText="Max Simulation Time"/>
+                    <Text fx:id="SimulationTime" fill="#f4f4f4" layoutX="210.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simulation Time: " textAlignment="CENTER" wrappingWidth="179.13671875">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Text>
+             <VBox fx:id="vBox" fillWidth="false" layoutX="14.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="545.0" />
+      <Pane layoutY="346.0" prefHeight="346.0" prefWidth="600.0" styleClass="Pane-Data">
+         <children>
+            <HBox alignment="CENTER" layoutX="84.0" layoutY="280.0" prefHeight="57.0" prefWidth="447.0" spacing="20.0" styleClass="hbox-menu">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clearGUI" text="Clear" />
+                    <Button mnemonicParsing="false" onAction="#initializeSimulation" prefWidth="113.0" text="Start Simulation" />
+                  <Button mnemonicParsing="false" onAction="#stopSimulation" prefWidth="206.0" text="Stop" />
+               </children>
+            </HBox>
+            <VBox fx:id="vBox1" layoutX="128.0" layoutY="14.0" prefHeight="266.0" prefWidth="344.0" spacing="10.0">
+               <children>
+                    <TextField fx:id="nrClients" alignment="CENTER" promptText="Number Clients" />
+                    <TextField fx:id="nrQueues" alignment="CENTER" promptText="Number Queues" />
+                   <HBox prefHeight="31.0" prefWidth="314.0" spacing="10.0" xmlns:fx="http://javafx.com/fxml">
+                       <children>
+                           <TextField fx:id="minArriveTime" alignment="CENTER" prefHeight="30.0" promptText="Minimum Arrival Time" />
+                           <TextField fx:id="maxArriveTime" alignment="CENTER" prefHeight="30.0" promptText="Maximum Arrival Time" />
+                       </children>
+                   </HBox>
+                  <HBox prefHeight="31.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                          <TextField fx:id="minServiceTime" alignment="CENTER" promptText="Minimum service Time" />
+                          <TextField fx:id="maxServiceTime" alignment="CENTER" promptText="Maximum Service Time" />
+                     </children>
+                  </HBox>
+                    <TextField fx:id="maxSimulationTime" alignment="CENTER" promptText="Max Simulation Time" />
+                  <HBox alignment="CENTER" prefHeight="31.0" prefWidth="209.0" spacing="60.0">
+                     <children>
+                          <Button mnemonicParsing="false" onAction="#shortestQueueButtonPressed" styleClass="button-Strategy" text="Shortest Queue" />
+                          <Button mnemonicParsing="false" onAction="#shortestTimeButtonPressed" prefHeight="7.0" prefWidth="222.0" styleClass="button-Strategy" text="Minimum Time" />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
     </children>
 </Pane>

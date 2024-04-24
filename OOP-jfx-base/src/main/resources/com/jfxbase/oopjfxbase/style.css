@@ -1,0 +1,81 @@
+.button{
+    -fx-background-color: #ffa500;
+    -fx-text-fill: white;
+    -fx-border: none;
+    -fx-text-alignment: center;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-background-radius: 10px;
+    -fx-margin: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 30px;
+}
+.button:hover {
+    -fx-background-color: #ffbf00;
+}
+
+.button-Strategy{
+    -fx-background-color: #83817a;
+    -fx-pref-width: 150px;
+}
+
+.button-Strategy:hover{
+    -fx-background-color: #949494;
+}
+
+.button-Strategy:pressed{
+    -fx-background-color: #1a1a1a;
+}
+
+.backgroundApp{
+    -fx-background-color: #2f2f2f;
+}
+
+
+.Pane-Data{
+    -fx-background-color: #111111;
+}
+
+.text-field {
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+}
+
+.hbox-menu{
+    -fx-background-radius: 10px;
+    -fx-background-color: rgba(180, 172, 172, 0.2);
+
+}
+
+.client {
+    -fx-background-color: #b0a7a7; /* Added a background color */
+    -fx-background-radius: 3px;
+    -fx-border-color: #333232;
+    -fx-border-width: 1px; /* Specify border width */
+    -fx-padding: 5px; /* Add some padding */
+    -fx-text-fill: black;
+    -fx-pref-width: 200px;
+}
+
+.queue{
+    -fx-background-color: #e89745; /* Added a background color */
+    -fx-background-radius: 10px;
+    -fx-border-color: #333232;
+    -fx-border-width: 1px; /* Specify border width */
+    -fx-padding: 5px; /* Add some padding */
+    -fx-text-fill: black;
+    -fx-pref-width: 170px;
+}
+
+
+.text-size{
+    -fx-font-size: 16px; /* Set the size to your preference */
+}
+
+
+.textEmptyClients{
+    -fx-font-size: 30px; /* Set the size to your preference */
+}

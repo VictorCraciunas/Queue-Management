@@ -6,10 +6,10 @@ import com.jfxbase.oopjfxbase.AppLogic.SimulationManager;
 import com.jfxbase.oopjfxbase.AppLogic.StrategyPicked;
 import com.jfxbase.oopjfxbase.utils.SceneController;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
 import java.util.List;
@@ -72,16 +72,22 @@ public class GUI extends SceneController {
     // Method to update the UI
     public void updateServerDisplay(Integer currTime, List<Server> servers) {
         vBox.getChildren().clear(); // Clear the existing content
+        vBox.setSpacing(10);
 
         HBox clients = new HBox();
         clients.setSpacing(10);
+
         if (!simulationManager.getClients().isEmpty()) {
             for (Client client : simulationManager.getClients()) {
                 Text clientNotDistributed = new Text(client.toString());
+                clientNotDistributed.setFill(Color.WHITE);
+                clientNotDistributed.getStyleClass().add("textEmptyClients");
                 clients.getChildren().add(clientNotDistributed);
             }
         } else {
-            Text emptyClients = new Text("Clients: empty");
+            Text emptyClients = new Text("Waiting room is empty");
+            emptyClients.setFill(Color.WHITE);
+            emptyClients.getStyleClass().add("textEmptyClients");
             clients.getChildren().add(emptyClients);
         }
         vBox.getChildren().add(clients);
@@ -90,12 +96,20 @@ public class GUI extends SceneController {
         for (Server server : servers) {
             HBox serverBox = new HBox();
             serverBox.setSpacing(10); // Adjust spacing as needed
+            serverBox.setPrefWidth(HBox.USE_COMPUTED_SIZE);
+            serverBox.setMaxWidth(Double.MAX_VALUE);
 
-            Text queueNumber = new Text("Queue " + server.getQueueNumber() + " waitingTime- " + server.getWaitingtime() + ": ");
+
+
+            Label queueNumber = new Label("Queue " + server.getQueueNumber() + " waitingTime- " + server.getWaitingtime() + ": ");
+            queueNumber.getStyleClass().add("queue");
+            queueNumber.setMinWidth(Control.USE_PREF_SIZE);
             serverBox.getChildren().add(queueNumber);
 
             for (Client client : server.getClients()) {
                 Text clientText = new Text();
+                clientText.setFill(Color.WHITE);
+                clientText.getStyleClass().add("text-size");
                 clientText.setText(client.toString()); // Ensure Client has a meaningful toString method
 
 
@@ -104,12 +118,33 @@ public class GUI extends SceneController {
 
             if (server.getClients().isEmpty()) {
                 Text clientText = new Text("Queue closed");
+                clientText.setFill(Color.WHITE);
+                clientText.getStyleClass().add("text-size");
                 serverBox.getChildren().add(clientText);
             }
             vBox.getChildren().add(serverBox);
         }
         SimulationTime.setText("Simulation Time: " + currTime);
     }
+
+    public void showAverageDetails(Double averageService, Double averageWaiting, Double PeakHour, Integer maxClientsInQueues) {
+        Text averageServiceText=new Text("Average Service " + averageService.toString());
+        Text averageWaitingText=new Text("Average Waiting " + averageWaiting.toString());
+        Text averagePeakHourText=new Text("Peak Hour " + PeakHour.toString() + " with " + maxClientsInQueues.toString() + " clients");
+
+        averageServiceText.setFill(Color.WHITE);
+        averageServiceText.getStyleClass().add("text-size");
+        averageWaitingText.setFill(Color.WHITE);
+        averageWaitingText.getStyleClass().add("text-size");
+        averagePeakHourText.getStyleClass().add("text-size");
+        averagePeakHourText.setFill(Color.WHITE);
+
+        vBox.getChildren().clear();
+        vBox.getChildren().add(averageServiceText);
+        vBox.getChildren().add(averageWaitingText);
+        vBox.getChildren().add(averagePeakHourText);
+    }
+
 
     @FXML
     public void shortestTimeButtonPressed() {
@@ -121,6 +156,26 @@ public class GUI extends SceneController {
     public void shortestQueueButtonPressed() {
         shortestTimePressed = 0;
         shortestQueuePressed = 1;
+    }
+
+    @FXML
+    public void clearGUI(){
+        vBox.getChildren().clear();
+        nrClients.clear();
+        nrQueues.clear();
+        minArriveTime.clear();
+        minServiceTime.clear();
+        maxArriveTime.clear();
+        maxServiceTime.clear();
+        maxSimulationTime.clear();
+        shortestQueuePressed=0;
+        shortestTimePressed=0;
+        simulationManager.getClients().clear();
+        simulationManager.scheduler.getServers().clear();
+    }
+    @FXML
+    public void stopSimulation(){
+        simulationManager.setRunning(false);
     }
 
 }
