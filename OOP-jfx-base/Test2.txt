@@ -1,0 +1,421 @@
+ Client{ID=5, arrival=32, service=3}
+ Client{ID=6, arrival=11, service=5}
+ Client{ID=7, arrival=12, service=3}
+ Client{ID=8, arrival=16, service=2}
+ Client{ID=9, arrival=17, service=3}
+ Client{ID=10, arrival=35, service=6}
+ Client{ID=11, arrival=39, service=4}
+ Client{ID=12, arrival=4, service=3}
+ Client{ID=13, arrival=32, service=3}
+ Client{ID=14, arrival=21, service=5}
+ Client{ID=15, arrival=39, service=3}
+ Client{ID=16, arrival=17, service=3}
+ Client{ID=17, arrival=8, service=3}
+ Client{ID=18, arrival=16, service=5}
+ Client{ID=19, arrival=25, service=3}
+ Client{ID=20, arrival=14, service=2}
+ Client{ID=21, arrival=39, service=2}
+ Client{ID=22, arrival=38, service=1}
+ Client{ID=23, arrival=3, service=2}
+ Client{ID=24, arrival=37, service=5}
+ Client{ID=25, arrival=3, service=4}
+ Client{ID=26, arrival=24, service=4}
+ Client{ID=27, arrival=22, service=3}
+ Client{ID=28, arrival=8, service=3}
+ Client{ID=29, arrival=34, service=3}
+ Client{ID=30, arrival=4, service=6}
+ Client{ID=31, arrival=39, service=3}
+ Client{ID=32, arrival=5, service=2}
+ Client{ID=33, arrival=2, service=6}
+ Client{ID=34, arrival=34, service=2}
+ Client{ID=35, arrival=31, service=3}
+ Client{ID=36, arrival=10, service=6}
+ Client{ID=37, arrival=13, service=2}
+ Client{ID=38, arrival=38, service=4}
+ Client{ID=39, arrival=18, service=1}
+ Client{ID=40, arrival=30, service=1}
+ Client{ID=41, arrival=39, service=1}
+ Client{ID=42, arrival=30, service=5}
+ Client{ID=43, arrival=6, service=6}
+ Client{ID=44, arrival=33, service=6}
+ Client{ID=45, arrival=14, service=4}
+ Client{ID=46, arrival=11, service=3}
+ Client{ID=47, arrival=20, service=1}
+ Client{ID=48, arrival=12, service=4}
+ Client{ID=49, arrival=25, service=2}
+ Client{ID=50, arrival=36, service=2}
+ Client{ID=51, arrival=5, service=3}
+ Client{ID=52, arrival=20, service=3}
+ Client{ID=53, arrival=39, service=2}
+ Client{ID=54, arrival=14, service=6}
+
+TIME SIMULATION ------------- 0
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=6, arrival=11, service=5} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=12, arrival=4, service=3} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=17, arrival=8, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=23, arrival=3, service=2} Client{ID=24, arrival=37, service=5} Client{ID=25, arrival=3, service=4} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=28, arrival=8, service=3} Client{ID=29, arrival=34, service=3} Client{ID=30, arrival=4, service=6} Client{ID=31, arrival=39, service=3} Client{ID=32, arrival=5, service=2} Client{ID=33, arrival=2, service=6} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=36, arrival=10, service=6} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=43, arrival=6, service=6} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=46, arrival=11, service=3} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=51, arrival=5, service=3} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue 1 closed
+Queue 2 closed
+Queue 3 closed
+Queue 4 closed
+Queue 5 closed
+
+TIME SIMULATION ------------- 1
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=6, arrival=11, service=5} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=12, arrival=4, service=3} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=17, arrival=8, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=23, arrival=3, service=2} Client{ID=24, arrival=37, service=5} Client{ID=25, arrival=3, service=4} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=28, arrival=8, service=3} Client{ID=29, arrival=34, service=3} Client{ID=30, arrival=4, service=6} Client{ID=31, arrival=39, service=3} Client{ID=32, arrival=5, service=2} Client{ID=33, arrival=2, service=6} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=36, arrival=10, service=6} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=43, arrival=6, service=6} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=46, arrival=11, service=3} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=51, arrival=5, service=3} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue 1 closed
+Queue 2 closed
+Queue 3 closed
+Queue 4 closed
+Queue 5 closed
+
+TIME SIMULATION ------------- 2
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=6, arrival=11, service=5} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=12, arrival=4, service=3} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=17, arrival=8, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=23, arrival=3, service=2} Client{ID=24, arrival=37, service=5} Client{ID=25, arrival=3, service=4} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=28, arrival=8, service=3} Client{ID=29, arrival=34, service=3} Client{ID=30, arrival=4, service=6} Client{ID=31, arrival=39, service=3} Client{ID=32, arrival=5, service=2} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=36, arrival=10, service=6} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=43, arrival=6, service=6} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=46, arrival=11, service=3} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=51, arrival=5, service=3} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue: 1 |  Client{ID=33, arrival=2, service=6}
+Queue 2 closed
+Queue 3 closed
+Queue 4 closed
+Queue 5 closed
+
+TIME SIMULATION ------------- 3
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=6, arrival=11, service=5} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=12, arrival=4, service=3} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=17, arrival=8, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=28, arrival=8, service=3} Client{ID=29, arrival=34, service=3} Client{ID=30, arrival=4, service=6} Client{ID=31, arrival=39, service=3} Client{ID=32, arrival=5, service=2} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=36, arrival=10, service=6} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=43, arrival=6, service=6} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=46, arrival=11, service=3} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=51, arrival=5, service=3} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue: 1 |  Client{ID=33, arrival=2, service=5}
+Queue: 2 |  Client{ID=23, arrival=3, service=2}
+Queue: 3 |  Client{ID=25, arrival=3, service=4}
+Queue 4 closed
+Queue 5 closed
+
+TIME SIMULATION ------------- 4
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=6, arrival=11, service=5} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=17, arrival=8, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=28, arrival=8, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=32, arrival=5, service=2} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=36, arrival=10, service=6} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=43, arrival=6, service=6} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=46, arrival=11, service=3} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=51, arrival=5, service=3} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue: 1 |  Client{ID=33, arrival=2, service=4}
+Queue: 2 |  Client{ID=23, arrival=3, service=1}
+Queue: 3 |  Client{ID=25, arrival=3, service=3}
+Queue: 4 |  Client{ID=12, arrival=4, service=3}
+Queue: 5 |  Client{ID=30, arrival=4, service=6}
+
+TIME SIMULATION ------------- 5
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=6, arrival=11, service=5} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=17, arrival=8, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=28, arrival=8, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=36, arrival=10, service=6} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=43, arrival=6, service=6} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=46, arrival=11, service=3} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue: 1 |  Client{ID=33, arrival=2, service=3}
+Queue: 2 |  Client{ID=32, arrival=5, service=2} |  Client{ID=51, arrival=5, service=3}
+Queue: 3 |  Client{ID=25, arrival=3, service=2}
+Queue: 4 |  Client{ID=12, arrival=4, service=2}
+Queue: 5 |  Client{ID=30, arrival=4, service=5}
+
+TIME SIMULATION ------------- 6
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=6, arrival=11, service=5} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=17, arrival=8, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=28, arrival=8, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=36, arrival=10, service=6} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=46, arrival=11, service=3} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue: 1 |  Client{ID=33, arrival=2, service=2}
+Queue: 2 |  Client{ID=32, arrival=5, service=1} |  Client{ID=51, arrival=5, service=3}
+Queue: 3 |  Client{ID=25, arrival=3, service=1} |  Client{ID=43, arrival=6, service=6}
+Queue: 4 |  Client{ID=12, arrival=4, service=1}
+Queue: 5 |  Client{ID=30, arrival=4, service=4}
+
+TIME SIMULATION ------------- 7
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=6, arrival=11, service=5} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=17, arrival=8, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=28, arrival=8, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=36, arrival=10, service=6} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=46, arrival=11, service=3} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue: 1 |  Client{ID=33, arrival=2, service=1}
+Queue: 2 |  Client{ID=51, arrival=5, service=3}
+Queue: 3 |  Client{ID=43, arrival=6, service=6}
+Queue 4 closed
+Queue: 5 |  Client{ID=30, arrival=4, service=3}
+
+TIME SIMULATION ------------- 8
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=6, arrival=11, service=5} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=36, arrival=10, service=6} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=46, arrival=11, service=3} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue: 1 |  Client{ID=28, arrival=8, service=3}
+Queue: 2 |  Client{ID=51, arrival=5, service=2}
+Queue: 3 |  Client{ID=43, arrival=6, service=5}
+Queue: 4 |  Client{ID=17, arrival=8, service=3}
+Queue: 5 |  Client{ID=30, arrival=4, service=2}
+
+TIME SIMULATION ------------- 9
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=6, arrival=11, service=5} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=36, arrival=10, service=6} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=46, arrival=11, service=3} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue: 1 |  Client{ID=28, arrival=8, service=2}
+Queue: 2 |  Client{ID=51, arrival=5, service=1}
+Queue: 3 |  Client{ID=43, arrival=6, service=4}
+Queue: 4 |  Client{ID=17, arrival=8, service=2}
+Queue: 5 |  Client{ID=30, arrival=4, service=1}
+
+TIME SIMULATION ------------- 10
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=6, arrival=11, service=5} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=46, arrival=11, service=3} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue: 1 |  Client{ID=28, arrival=8, service=1}
+Queue 2 closed
+Queue: 3 |  Client{ID=43, arrival=6, service=3}
+Queue: 4 |  Client{ID=17, arrival=8, service=1}
+Queue: 5 |  Client{ID=36, arrival=10, service=6}
+
+TIME SIMULATION ------------- 11
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=7, arrival=12, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=47, arrival=20, service=1} Client{ID=48, arrival=12, service=4} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue 1 closed
+Queue: 2 |  Client{ID=6, arrival=11, service=5}
+Queue: 3 |  Client{ID=43, arrival=6, service=2}
+Queue: 4 |  Client{ID=46, arrival=11, service=3}
+Queue: 5 |  Client{ID=36, arrival=10, service=5}
+
+TIME SIMULATION ------------- 12
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=37, arrival=13, service=2} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=47, arrival=20, service=1} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue: 1 |  Client{ID=7, arrival=12, service=3}
+Queue: 2 |  Client{ID=6, arrival=11, service=4}
+Queue: 3 |  Client{ID=43, arrival=6, service=1} |  Client{ID=48, arrival=12, service=4}
+Queue: 4 |  Client{ID=46, arrival=11, service=2}
+Queue: 5 |  Client{ID=36, arrival=10, service=4}
+
+TIME SIMULATION ------------- 13
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=20, arrival=14, service=2} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=45, arrival=14, service=4} Client{ID=47, arrival=20, service=1} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2} Client{ID=54, arrival=14, service=6}
+Queue: 1 |  Client{ID=7, arrival=12, service=2}
+Queue: 2 |  Client{ID=6, arrival=11, service=3}
+Queue: 3 |  Client{ID=48, arrival=12, service=4}
+Queue: 4 |  Client{ID=46, arrival=11, service=1} |  Client{ID=37, arrival=13, service=2}
+Queue: 5 |  Client{ID=36, arrival=10, service=3}
+
+TIME SIMULATION ------------- 14
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=47, arrival=20, service=1} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=7, arrival=12, service=1} |  Client{ID=20, arrival=14, service=2}
+Queue: 2 |  Client{ID=6, arrival=11, service=2} |  Client{ID=54, arrival=14, service=6}
+Queue: 3 |  Client{ID=48, arrival=12, service=3}
+Queue: 4 |  Client{ID=37, arrival=13, service=2} |  Client{ID=45, arrival=14, service=4}
+Queue: 5 |  Client{ID=36, arrival=10, service=2}
+
+TIME SIMULATION ------------- 15
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=8, arrival=16, service=2} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=18, arrival=16, service=5} Client{ID=19, arrival=25, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=47, arrival=20, service=1} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=20, arrival=14, service=2}
+Queue: 2 |  Client{ID=6, arrival=11, service=1} |  Client{ID=54, arrival=14, service=6}
+Queue: 3 |  Client{ID=48, arrival=12, service=2}
+Queue: 4 |  Client{ID=37, arrival=13, service=1} |  Client{ID=45, arrival=14, service=4}
+Queue: 5 |  Client{ID=36, arrival=10, service=1}
+
+TIME SIMULATION ------------- 16
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=9, arrival=17, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=16, arrival=17, service=3} Client{ID=19, arrival=25, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=47, arrival=20, service=1} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=20, arrival=14, service=1} |  Client{ID=18, arrival=16, service=5}
+Queue: 2 |  Client{ID=54, arrival=14, service=6}
+Queue: 3 |  Client{ID=48, arrival=12, service=1}
+Queue: 4 |  Client{ID=45, arrival=14, service=4}
+Queue: 5 |  Client{ID=8, arrival=16, service=2}
+
+TIME SIMULATION ------------- 17
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=19, arrival=25, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=39, arrival=18, service=1} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=47, arrival=20, service=1} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=18, arrival=16, service=5}
+Queue: 2 |  Client{ID=54, arrival=14, service=5}
+Queue: 3 |  Client{ID=9, arrival=17, service=3}
+Queue: 4 |  Client{ID=45, arrival=14, service=3}
+Queue: 5 |  Client{ID=8, arrival=16, service=1} |  Client{ID=16, arrival=17, service=3}
+
+TIME SIMULATION ------------- 18
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=19, arrival=25, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=47, arrival=20, service=1} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=18, arrival=16, service=4}
+Queue: 2 |  Client{ID=54, arrival=14, service=4}
+Queue: 3 |  Client{ID=9, arrival=17, service=2} |  Client{ID=39, arrival=18, service=1}
+Queue: 4 |  Client{ID=45, arrival=14, service=2}
+Queue: 5 |  Client{ID=16, arrival=17, service=3}
+
+TIME SIMULATION ------------- 19
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=19, arrival=25, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=47, arrival=20, service=1} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=52, arrival=20, service=3} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=18, arrival=16, service=3}
+Queue: 2 |  Client{ID=54, arrival=14, service=3}
+Queue: 3 |  Client{ID=9, arrival=17, service=1} |  Client{ID=39, arrival=18, service=1}
+Queue: 4 |  Client{ID=45, arrival=14, service=1}
+Queue: 5 |  Client{ID=16, arrival=17, service=2}
+
+TIME SIMULATION ------------- 20
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=14, arrival=21, service=5} Client{ID=15, arrival=39, service=3} Client{ID=19, arrival=25, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=18, arrival=16, service=2}
+Queue: 2 |  Client{ID=54, arrival=14, service=2}
+Queue: 3 |  Client{ID=39, arrival=18, service=1}
+Queue: 4 |  Client{ID=47, arrival=20, service=1} |  Client{ID=52, arrival=20, service=3}
+Queue: 5 |  Client{ID=16, arrival=17, service=1}
+
+TIME SIMULATION ------------- 21
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=15, arrival=39, service=3} Client{ID=19, arrival=25, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=27, arrival=22, service=3} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=18, arrival=16, service=1}
+Queue: 2 |  Client{ID=54, arrival=14, service=1}
+Queue: 3 |  Client{ID=14, arrival=21, service=5}
+Queue: 4 |  Client{ID=52, arrival=20, service=3}
+Queue 5 closed
+
+TIME SIMULATION ------------- 22
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=15, arrival=39, service=3} Client{ID=19, arrival=25, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=27, arrival=22, service=3}
+Queue 2 closed
+Queue: 3 |  Client{ID=14, arrival=21, service=4}
+Queue: 4 |  Client{ID=52, arrival=20, service=2}
+Queue 5 closed
+
+TIME SIMULATION ------------- 23
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=15, arrival=39, service=3} Client{ID=19, arrival=25, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=26, arrival=24, service=4} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=27, arrival=22, service=2}
+Queue 2 closed
+Queue: 3 |  Client{ID=14, arrival=21, service=3}
+Queue: 4 |  Client{ID=52, arrival=20, service=1}
+Queue 5 closed
+
+TIME SIMULATION ------------- 24
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=15, arrival=39, service=3} Client{ID=19, arrival=25, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=49, arrival=25, service=2} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=27, arrival=22, service=1}
+Queue: 2 |  Client{ID=26, arrival=24, service=4}
+Queue: 3 |  Client{ID=14, arrival=21, service=2}
+Queue 4 closed
+Queue 5 closed
+
+TIME SIMULATION ------------- 25
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=49, arrival=25, service=2}
+Queue: 2 |  Client{ID=26, arrival=24, service=3}
+Queue: 3 |  Client{ID=14, arrival=21, service=1}
+Queue: 4 |  Client{ID=19, arrival=25, service=3}
+Queue 5 closed
+
+TIME SIMULATION ------------- 26
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=49, arrival=25, service=1}
+Queue: 2 |  Client{ID=26, arrival=24, service=2}
+Queue 3 closed
+Queue: 4 |  Client{ID=19, arrival=25, service=2}
+Queue 5 closed
+
+TIME SIMULATION ------------- 27
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue 1 closed
+Queue: 2 |  Client{ID=26, arrival=24, service=1}
+Queue 3 closed
+Queue: 4 |  Client{ID=19, arrival=25, service=1}
+Queue 5 closed
+
+TIME SIMULATION ------------- 28
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue 1 closed
+Queue 2 closed
+Queue 3 closed
+Queue 4 closed
+Queue 5 closed
+
+TIME SIMULATION ------------- 29
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=40, arrival=30, service=1} Client{ID=41, arrival=39, service=1} Client{ID=42, arrival=30, service=5} Client{ID=44, arrival=33, service=6} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue 1 closed
+Queue 2 closed
+Queue 3 closed
+Queue 4 closed
+Queue 5 closed
+
+TIME SIMULATION ------------- 30
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=35, arrival=31, service=3} Client{ID=38, arrival=38, service=4} Client{ID=41, arrival=39, service=1} Client{ID=44, arrival=33, service=6} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=40, arrival=30, service=1}
+Queue: 2 |  Client{ID=42, arrival=30, service=5}
+Queue 3 closed
+Queue 4 closed
+Queue 5 closed
+
+TIME SIMULATION ------------- 31
+Clients:  Client{ID=5, arrival=32, service=3} Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=13, arrival=32, service=3} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=38, arrival=38, service=4} Client{ID=41, arrival=39, service=1} Client{ID=44, arrival=33, service=6} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=35, arrival=31, service=3}
+Queue: 2 |  Client{ID=42, arrival=30, service=4}
+Queue 3 closed
+Queue 4 closed
+Queue 5 closed
+
+TIME SIMULATION ------------- 32
+Clients:  Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=38, arrival=38, service=4} Client{ID=41, arrival=39, service=1} Client{ID=44, arrival=33, service=6} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=35, arrival=31, service=2}
+Queue: 2 |  Client{ID=42, arrival=30, service=3}
+Queue: 3 |  Client{ID=5, arrival=32, service=3}
+Queue: 4 |  Client{ID=13, arrival=32, service=3}
+Queue 5 closed
+
+TIME SIMULATION ------------- 33
+Clients:  Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=29, arrival=34, service=3} Client{ID=31, arrival=39, service=3} Client{ID=34, arrival=34, service=2} Client{ID=38, arrival=38, service=4} Client{ID=41, arrival=39, service=1} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=35, arrival=31, service=1}
+Queue: 2 |  Client{ID=42, arrival=30, service=2}
+Queue: 3 |  Client{ID=5, arrival=32, service=2}
+Queue: 4 |  Client{ID=13, arrival=32, service=2}
+Queue: 5 |  Client{ID=44, arrival=33, service=6}
+
+TIME SIMULATION ------------- 34
+Clients:  Client{ID=10, arrival=35, service=6} Client{ID=11, arrival=39, service=4} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=31, arrival=39, service=3} Client{ID=38, arrival=38, service=4} Client{ID=41, arrival=39, service=1} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=29, arrival=34, service=3}
+Queue: 2 |  Client{ID=42, arrival=30, service=1}
+Queue: 3 |  Client{ID=5, arrival=32, service=1} |  Client{ID=34, arrival=34, service=2}
+Queue: 4 |  Client{ID=13, arrival=32, service=1}
+Queue: 5 |  Client{ID=44, arrival=33, service=5}
+
+TIME SIMULATION ------------- 35
+Clients:  Client{ID=11, arrival=39, service=4} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=31, arrival=39, service=3} Client{ID=38, arrival=38, service=4} Client{ID=41, arrival=39, service=1} Client{ID=50, arrival=36, service=2} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=29, arrival=34, service=2}
+Queue: 2 |  Client{ID=10, arrival=35, service=6}
+Queue: 3 |  Client{ID=34, arrival=34, service=2}
+Queue 4 closed
+Queue: 5 |  Client{ID=44, arrival=33, service=4}
+
+TIME SIMULATION ------------- 36
+Clients:  Client{ID=11, arrival=39, service=4} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=24, arrival=37, service=5} Client{ID=31, arrival=39, service=3} Client{ID=38, arrival=38, service=4} Client{ID=41, arrival=39, service=1} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=29, arrival=34, service=1}
+Queue: 2 |  Client{ID=10, arrival=35, service=5}
+Queue: 3 |  Client{ID=34, arrival=34, service=1}
+Queue: 4 |  Client{ID=50, arrival=36, service=2}
+Queue: 5 |  Client{ID=44, arrival=33, service=3}
+
+TIME SIMULATION ------------- 37
+Clients:  Client{ID=11, arrival=39, service=4} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=22, arrival=38, service=1} Client{ID=31, arrival=39, service=3} Client{ID=38, arrival=38, service=4} Client{ID=41, arrival=39, service=1} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=24, arrival=37, service=5}
+Queue: 2 |  Client{ID=10, arrival=35, service=4}
+Queue 3 closed
+Queue: 4 |  Client{ID=50, arrival=36, service=1}
+Queue: 5 |  Client{ID=44, arrival=33, service=2}
+
+TIME SIMULATION ------------- 38
+Clients:  Client{ID=11, arrival=39, service=4} Client{ID=15, arrival=39, service=3} Client{ID=21, arrival=39, service=2} Client{ID=31, arrival=39, service=3} Client{ID=41, arrival=39, service=1} Client{ID=53, arrival=39, service=2}
+Queue: 1 |  Client{ID=24, arrival=37, service=4}
+Queue: 2 |  Client{ID=10, arrival=35, service=3}
+Queue: 3 |  Client{ID=22, arrival=38, service=1}
+Queue: 4 |  Client{ID=38, arrival=38, service=4}
+Queue: 5 |  Client{ID=44, arrival=33, service=1}
+
+TIME SIMULATION ------------- 39
+Clients: empty
+Queue: 1 |  Client{ID=24, arrival=37, service=3} |  Client{ID=31, arrival=39, service=3}
+Queue: 2 |  Client{ID=10, arrival=35, service=2} |  Client{ID=21, arrival=39, service=2}
+Queue: 3 |  Client{ID=11, arrival=39, service=4}
+Queue: 4 |  Client{ID=38, arrival=38, service=3} |  Client{ID=41, arrival=39, service=1}
+Queue: 5 |  Client{ID=15, arrival=39, service=3} |  Client{ID=53, arrival=39, service=2}
+
+TIME SIMULATION ------------- 40
+Clients: empty
+Queue: 1 |  Client{ID=24, arrival=37, service=2} |  Client{ID=31, arrival=39, service=3}
+Queue: 2 |  Client{ID=10, arrival=35, service=1} |  Client{ID=21, arrival=39, service=2}
+Queue: 3 |  Client{ID=11, arrival=39, service=3}
+Queue: 4 |  Client{ID=38, arrival=38, service=2} |  Client{ID=41, arrival=39, service=1}
+Queue: 5 |  Client{ID=15, arrival=39, service=2} |  Client{ID=53, arrival=39, service=2}
+
+TIME SIMULATION ------------- 41
+Clients: empty
+Queue: 1 |  Client{ID=24, arrival=37, service=1} |  Client{ID=31, arrival=39, service=3}
+Queue: 2 |  Client{ID=21, arrival=39, service=2}
+Queue: 3 |  Client{ID=11, arrival=39, service=2}
+Queue: 4 |  Client{ID=38, arrival=38, service=1} |  Client{ID=41, arrival=39, service=1}
+Queue: 5 |  Client{ID=15, arrival=39, service=1} |  Client{ID=53, arrival=39, service=2}
+
+TIME SIMULATION ------------- 42
+Clients: empty
+Queue: 1 |  Client{ID=31, arrival=39, service=3}
+Queue: 2 |  Client{ID=21, arrival=39, service=1}
+Queue: 3 |  Client{ID=11, arrival=39, service=1}
+Queue: 4 |  Client{ID=41, arrival=39, service=1}
+Queue: 5 |  Client{ID=53, arrival=39, service=2}
+
+TIME SIMULATION ------------- 43
+Clients: empty
+Queue: 1 |  Client{ID=31, arrival=39, service=2}
+Queue 2 closed
+Queue 3 closed
+Queue 4 closed
+Queue: 5 |  Client{ID=53, arrival=39, service=1}
+
+TIME SIMULATION ------------- 44
+Clients: empty
+Queue: 1 |  Client{ID=31, arrival=39, service=1}
+Queue 2 closed
+Queue 3 closed
+Queue 4 closed
+Queue 5 closed
+
+TIME SIMULATION ------------- 45
+Clients: empty
+Queue 1 closed
+Queue 2 closed
+Queue 3 closed
+Queue 4 closed
+Queue 5 closed
+Average service Time: 3.34
+Average waiting Time: 4.02
+Peak hour: 14 with 9 clients 
