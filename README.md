@@ -61,7 +61,7 @@ QueueSimulation/
 ## Installation & Running the Application
 ### 1. Clone the Repository
 ```
-git clone https://github.com/yourusername/Queue-Management.git
+git clone https://github.com/VictorCraciunas/Queue-Management.git
 ```
 
 ### 2. Run the Application
